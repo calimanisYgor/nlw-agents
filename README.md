@@ -14,6 +14,8 @@ Para explorar e interagir com o projeto:
 4.  **Selecione um jogo** na interface da aplicação.
 5.  **Faça sua pergunta** e veja a inteligência artificial em ação!
 
+Caso prefira, você pode acessar diretamente através do link da Vercel: https://nlw-agents-nine.vercel.app/.
+
 ---
 
 **Tecnologias Utilizadas:**
