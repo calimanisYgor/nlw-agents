@@ -20,8 +20,11 @@
     <main>
       <section>
         <div>
-          <h1>Seu Guia de IA para Builds</h1>
-          <p>Crie builds e estratégias vencedoras com o poder da IA.</p>
+          <h1>Seu Guia de IA para Builds no seu Souls Like favorito</h1>
+          <p>
+            Crie builds e estratégias vencedoras com o poder da IA. Receba um
+            passo a passo detalhado para seu objetivo
+          </p>
           <form id="form">
             <input
               type="password"
@@ -29,18 +32,15 @@
               placeholder="Informe sua chave API do Gemini"
               required
             />
-            <select id="game_select">
-              <option selected disabled>Selecione um jogo</option>
-              <option value="elden_ring">Elden Ring</option>
-              <option value="dark_souls_3">Dark Souls III</option>
-              <option value="bloodborne">Bloodborne</option>
-              <option value="sekiro">Sekiro: Shadows Die Twice</option>
-              <option value="demon_s_souls">Demon's Souls</option>
-              <option value="nioh_2">Nioh 2</option>
-              <option value="lies_of_p">Lies of P</option>
-              <option value="remnant_2">Remnant 2</option>
-              <option value="hollow_knight">Hollow Knight</option>
-              <option value="the_surge_2">The Surge 2</option>
+            <select id="gameSelect">
+              <option selected value="">Selecione um jogo</option>
+              <option value="Elden Ring">Elden Ring</option>
+              <option value="Dark Souls III">Dark Souls III</option>
+              <option value="Bloodborne">Bloodborne</option>
+              <option value="Sekiro">Sekiro: Shadows Die Twice</option>
+              <option value="Demon's Souls">Demon's Souls</option>
+              <option value="Nioh 2">Nioh 2</option>
+              <option value="Lies of P">Lies of P</option>
             </select>
             <input
               type="text"
@@ -57,5 +57,6 @@
     </main>
   </body>
 
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
   <script src="./scripts.js"></script>
 </html>

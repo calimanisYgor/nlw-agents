@@ -104,10 +104,18 @@ button {
   transition: all 0.3s;
 }
 
-button:hover{
-cursor: pointer;
-transform: translateY(-2px);
-box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  /* opacity: 0.5; */
+  cursor: not-allowed;
 }
 
 /* animations */
@@ -117,9 +125,18 @@ main section {
   animation: appear 700ms forwards;
 }
 
+.loading {
+  animation: pulse 1s infinite;
+}
+
 @keyframes appear {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
   }
 }
