@@ -118,6 +118,28 @@ button:disabled {
   cursor: not-allowed;
 }
 
+#aiResponse{
+  background-color: rgb(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: solid 4px var(--turquoise-green);
+  text-align: justify;
+}
+
+#aiResponse p{
+  color: rgba(255, 255, 255, 0.95);
+}
+
+#aiResponse ul{
+  padding-left: 1.5rem;
+  text-align: justify;
+  opacity: .7;
+}
+
+.hidden{
+  display: none;
+}
+
 /* animations */
 main section {
   opacity: 0;

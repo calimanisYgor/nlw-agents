@@ -14,11 +14,11 @@ const askToAi = async (question, game, apiKey) => {
   const model = "gemini-2.5-flash";
   const baseURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
   const pergunta = `
-    Gerar **builds PVE otimizadas** para "${game}", focando em **alto dano corpo a corpo**. A pergunta do usuário: "${question}".
+    Como um especialista em ${game}, gere **builds PVE otimizadas**. A pergunta do usuário: "${question}".
 
-    Considere: **escalabilidade de atributos** (Força, Destreza, Fé, Inteligência), **sinergia de equipamentos** (armas, armaduras, talismãs), e **magias/milagres/feitiços complementares**.
+    Considere: **escalabilidade de atributos** (Força, Destreza, Fé, Inteligência, etc. — adapte conforme o jogo), **sinergia de equipamentos** (armas, armaduras, acessórios), e **habilidades/magias/itens consumíveis complementares**. Inclua o **local de obtenção de cada item**.
 
-    Objetivo: **viabilidade em endgame** e **progressão fácil** (jogo base/DLCs). Inclua **distribuição de pontos por nível** (Nvl 50, 100, 150) e **estratégias de obtenção de itens**. Evite exploits.
+    Objetivo: **viabilidade em endgame** e **progressão eficiente** (jogo base/DLCs). Inclua **distribuição de pontos por nível** (Nvl 50, 100, 150 ou equivalentes) e **estratégias de obtenção de itens**. Evite exploits.
 
     ---
 
@@ -32,11 +32,18 @@ const askToAi = async (question, game, apiKey) => {
 
   const contents = [
     {
+      role: "user",
       parts: [
         {
           text: pergunta,
         },
       ],
+    },
+  ];
+
+  const tools = [
+    {
+      google_search: {},
     },
   ];
 
@@ -48,6 +55,7 @@ const askToAi = async (question, game, apiKey) => {
     },
     body: JSON.stringify({
       contents,
+      tools
     }),
   });
 
@@ -73,7 +81,8 @@ const submitForm = async (event) => {
 
   try {
     const text = await askToAi(question, game, apiKey);
-    aiResponse.querySelector(".response-content").innerHTML = text;
+    aiResponse.querySelector(".response-content").innerHTML = markdownToHTML(text);
+    aiResponse.classList.remove('hidden')
   } catch (error) {
     console.error("Erro: ", error);
   } finally {
