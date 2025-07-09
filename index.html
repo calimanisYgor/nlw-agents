@@ -20,10 +20,42 @@
     <main>
       <section>
         <div>
-          <h1>Seu assistente de IA para builds</h1>
-          <p>Pergunte sobre estratégias, builds e muito mais para seus jogos!</p>
+          <h1>Seu Guia de IA para Builds</h1>
+          <p>Crie builds e estratégias vencedoras com o poder da IA.</p>
+          <form id="form">
+            <input
+              type="password"
+              id="apiKey"
+              placeholder="Informe sua chave API do Gemini"
+              required
+            />
+            <select id="game_select">
+              <option selected disabled>Selecione um jogo</option>
+              <option value="elden_ring">Elden Ring</option>
+              <option value="dark_souls_3">Dark Souls III</option>
+              <option value="bloodborne">Bloodborne</option>
+              <option value="sekiro">Sekiro: Shadows Die Twice</option>
+              <option value="demon_s_souls">Demon's Souls</option>
+              <option value="nioh_2">Nioh 2</option>
+              <option value="lies_of_p">Lies of P</option>
+              <option value="remnant_2">Remnant 2</option>
+              <option value="hollow_knight">Hollow Knight</option>
+              <option value="the_surge_2">The Surge 2</option>
+            </select>
+            <input
+              type="text"
+              id="question"
+              placeholder="Ex.: Melhor build para começar no Elden Ring"
+            />
+            <button id="askButton">Perguntar</button>
+          </form>
+          <div id="aiReponse">
+            <div class="response-content"></div>
+          </div>
         </div>
       </section>
     </main>
   </body>
+
+  <script src="./scripts.js"></script>
 </html>
