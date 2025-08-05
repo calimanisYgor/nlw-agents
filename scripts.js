@@ -76,7 +76,7 @@ const submitForm = async (event) => {
     return;
   }
   askButton.disabled = true;
-  askButton.textContent = "Perguntando...";
+  askButton.textContent = "Decifrando Runas...";
   askButton.classList.add("loading");
 
   try {
