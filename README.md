@@ -14,7 +14,7 @@ Para explorar e interagir com o projeto:
 4.  **Selecione um jogo** na interface da aplicação.
 5.  **Faça sua pergunta** e veja a inteligência artificial em ação!
 
-Caso prefira, você pode acessar diretamente através do link da Vercel: https://nlw-agents-nine.vercel.app/.
+Caso prefira, você pode acessar diretamente através do link da Vercel: <a href="https://tarnished-ai.vercel.app/"  target="_blank">https://tarnished-ai.vercel.app/</a>.
 
 ---
 
