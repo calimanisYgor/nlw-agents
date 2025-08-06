@@ -7,7 +7,7 @@
 
 ---
 
-## 🧠 Sobre o Projeto
+## Sobre o Projeto
 
 **The Tarnished AI** é uma aplicação web que utiliza inteligência artificial para guiar jogadores na criação de builds personalizadas em jogos do gênero **Soulslike**.
 
