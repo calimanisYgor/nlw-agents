@@ -2,7 +2,6 @@
 
 [![Deploy](https://img.shields.io/badge/Vercel-Live%20Preview-black?logo=vercel)](https://tarnished-ai.vercel.app/)
 [![Made with HTML, CSS, JS](https://img.shields.io/badge/HTML%20%2F%20CSS%20%2F%20JS-blue?logo=javascript&logoColor=white)]()
-[![License](https://img.shields.io/badge/license-MIT-green)]()
 
 > Projeto desenvolvido durante o evento **NLW Agents** da Rocketseat.
 
