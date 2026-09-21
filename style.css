@@ -96,6 +96,24 @@ input {
   flex: 1;
 }
 
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 0.8125rem;
+  color: var(--fog-silver);
+  cursor: pointer;
+}
+
+.checkbox-field input[type="checkbox"] {
+  all: revert;
+  flex: none;
+  width: auto;
+  accent-color: var(--rune-purple);
+  cursor: pointer;
+}
+
 button {
   width: 100%;
   border: 0;
@@ -132,6 +150,14 @@ button:disabled {
 
 #aiResponse p {
   color: rgba(255, 255, 255, 0.95);
+}
+
+#aiResponse.error {
+  border-left-color: #ff4d4d;
+}
+
+#aiResponse.error .response-content {
+  color: #ff8a80;
 }
 
 #aiResponse ul {
